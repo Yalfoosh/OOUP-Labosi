@@ -204,6 +204,9 @@ int main()
     printf("\nInitializing %d dogs...\n", dogs_to_run);
     Animal** dogs = createAnimals(Dog, dogs_to_run);
 
+    for(int i = 0; i < dogs_to_run; ++i)
+        printf("[%d] I have a dog named %s.\n", i + 1, dogs[i]->name);
+
     return 0;
 }
 
@@ -250,7 +253,7 @@ int main()
  *
  * ---------------------------------------------------------------------------------------------------------------------
  *
- * Objekti su pokazivaći na generičku klasu.
+ * Objekti su pokazivači na generičku klasu.
  * Metode su reference na funkcije u tablicama dogFunctions i catFunctions.
  * Virtualne metode su animalPrintGreeting() i animalPrintMenu() jer se one ponašaju ovisno o implementaciji za klasu.
  * Konstruktori su teoretski createDog() i createCat().
